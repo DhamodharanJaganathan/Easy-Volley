@@ -18,7 +18,7 @@ add remote maven url
     }
 ```
     
-then add a library dependency. **Remember** to check for latest release [here](https://github.com/scottyab/showhidepasswordedittext/releases) 
+then add a library dependency. **Remember** to check for latest release [here](https://github.com/DhamodharanJaganathan/Easy-Volley/releases) 
                              
 ```groovy
     dependencies {
