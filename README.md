@@ -1,4 +1,4 @@
-# Easy-Volley
+# Easy-Volley-Android
 
 Volley is an HTTP library that makes networking for Android apps easier and, most importantly, faster.
 
@@ -6,6 +6,8 @@ Volley is an HTTP library that makes networking for Android apps easier and, mos
 This library is not yet released in Maven Central, until then you can add as a library module or use JitPack.io
 
 add remote maven url
+
+add this blow line in root build.gradle
 
 ```groovy
 
