@@ -27,3 +27,30 @@ then add a library dependency. **Remember** to check for latest release [here](h
         compile 'com.github.DhamodharanJaganathan:Easy-Volley:1.0.0'
     }
 ```
+
+```groovy
+ // post data (ie: form data)
+            HashMap<String, String> payload = new HashMap<>();
+            payload.put("name", "Alif");
+            payload.put("email", "http://itsalif.info");
+
+
+            String url = "http://httpbin.org/post";
+            VolleyCall.getResponse(MainActivity.this, url, "POST", payload, new VolleyCallback() {
+                @Override
+                public void onSuccessResponse(JSONObject response) {
+
+                    Toast.makeText(MainActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
+                }
+
+
+                @Override
+                public void verror(com.android.volley.VolleyError error) {
+
+                    Toast.makeText(MainActivity.this, "Server not found", Toast.LENGTH_SHORT).show();
+
+                }
+
+            });
+            
+            ```
