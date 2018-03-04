@@ -2,7 +2,9 @@
 
 Volley is an HTTP library that makes networking for Android apps easier and, most importantly, faster.
 
-![alt text](https://i.imgur.com/w00Jty9.jpg)
+<p align="center">
+  <img src="https://i.imgur.com/w00Jty9.jpg" width="256" title="Github Logo">
+</p>
 
 ## Add as dependency
 This library is not yet released in Maven Central, until then you can add as a library module or use JitPack.io
