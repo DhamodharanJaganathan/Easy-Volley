@@ -94,5 +94,67 @@ if (InternetConnectionChecker.getInstance(this).isOnline()) {
         }
 ```
            
-  
+ ## Example for PUT method :
+
+```groovy
+if (InternetConnectionChecker.getInstance(this).isOnline()) {
+
+
+            // post data (ie: form data)
+            HashMap<String, String> payload = new HashMap<>();
+            payload.put("name", "Alif");
+            payload.put("email", "http://itsalif.info");
+
+
+            String url = "http://httpbin.org/put";
+            VolleyCall.getResponse(MainActivity.this, url, "PUT", payload, new VolleyCallback() {
+                @Override
+                public void onSuccessResponse(JSONObject response) {
+
+                    Toast.makeText(MainActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
+                }
+
+
+                @Override
+                public void verror(com.android.volley.VolleyError error) {
+
+                    Toast.makeText(MainActivity.this, "Server not found", Toast.LENGTH_SHORT).show();
+
+                }
+
+            });
+        } else {
+
+            Toast.makeText(this, "No Internet Connection", Toast.LENGTH_SHORT).show();
+        }
+```
  
+  ## Example for DELETE method :
+
+```groovy
+if (InternetConnectionChecker.getInstance(this).isOnline()) {
+
+            HashMap<String, String> payload = new HashMap<>();  // Dummy payload
+
+            String url = "http://httpbin.org/delete";
+            VolleyCall.getResponse(MainActivity.this, url, "DELETE", payload, new VolleyCallback() {
+                @Override
+                public void onSuccessResponse(JSONObject response) {
+
+                    Toast.makeText(MainActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
+                }
+
+
+                @Override
+                public void verror(com.android.volley.VolleyError error) {
+
+                    Toast.makeText(MainActivity.this, "Server not found", Toast.LENGTH_SHORT).show();
+
+                }
+
+            });
+        } else {
+
+            Toast.makeText(this, "No Internet Connection", Toast.LENGTH_SHORT).show();
+        }
+   ```     
