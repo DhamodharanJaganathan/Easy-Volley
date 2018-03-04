@@ -28,8 +28,44 @@ then add a library dependency. **Remember** to check for latest release [here](h
     }
 ```
 
+## Example for GET method :
+
 ```groovy
- // post data (ie: form data)
+if (InternetConnectionChecker.getInstance(this).isOnline()) {
+
+            HashMap<String, String> payload = new HashMap<>();  // Dummy payload
+
+            String url = "http://httpbin.org/get?param1=hello";
+            VolleyCall.getResponse(MainActivity.this, url, "GET", payload, new VolleyCallback() {
+                @Override
+                public void onSuccessResponse(JSONObject response) {
+
+                    Toast.makeText(MainActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
+                }
+
+
+                @Override
+                public void verror(com.android.volley.VolleyError error) {
+
+                    Toast.makeText(MainActivity.this, "Server not found", Toast.LENGTH_SHORT).show();
+
+                }
+
+            });
+        } else {
+
+            Toast.makeText(this, "No Internet Connection", Toast.LENGTH_SHORT).show();
+        }
+```
+
+## Example for POST method :
+
+```groovy
+
+        if (InternetConnectionChecker.getInstance(this).isOnline()) {
+
+
+            // post data (ie: form data)
             HashMap<String, String> payload = new HashMap<>();
             payload.put("name", "Alif");
             payload.put("email", "http://itsalif.info");
@@ -52,5 +88,11 @@ then add a library dependency. **Remember** to check for latest release [here](h
                 }
 
             });
-            
-            ```
+        } else {
+
+            Toast.makeText(this, "No Internet Connection", Toast.LENGTH_SHORT).show();
+        }
+```
+           
+  
+ 
