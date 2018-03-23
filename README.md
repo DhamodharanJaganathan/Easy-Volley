@@ -9,7 +9,7 @@ Volley is an HTTP library that makes networking for Android apps easier and, mos
 ## Add as dependency
 This library is not yet released in Maven Central, until then you can add as a library module or use JitPack.io add remote maven url
 
-Add this blow line in root build.gradle
+### Add this below line in root build.gradle
 
 ```groovy
 
