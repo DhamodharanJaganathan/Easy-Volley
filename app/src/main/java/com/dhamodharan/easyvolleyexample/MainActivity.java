@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void verror(com.android.volley.VolleyError error) {
 
-                    Toast.makeText(MainActivity.this, "Server not found", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Try Later", Toast.LENGTH_SHORT).show();
 
                 }
 
@@ -130,8 +130,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void verror(com.android.volley.VolleyError error) {
 
-                    Toast.makeText(MainActivity.this, "Server not found", Toast.LENGTH_SHORT).show();
-
+                    Toast.makeText(MainActivity.this, "Try Later", Toast.LENGTH_SHORT).show();
                 }
 
             });
@@ -166,8 +165,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void verror(com.android.volley.VolleyError error) {
 
-                    Toast.makeText(MainActivity.this, "Server not found", Toast.LENGTH_SHORT).show();
-
+                    Toast.makeText(MainActivity.this, "Try Later", Toast.LENGTH_SHORT).show();
                 }
 
             });
@@ -197,8 +195,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void verror(com.android.volley.VolleyError error) {
 
-                    Toast.makeText(MainActivity.this, "Server not found", Toast.LENGTH_SHORT).show();
-
+                    Toast.makeText(MainActivity.this, "Try Later", Toast.LENGTH_SHORT).show();
                 }
 
             });
