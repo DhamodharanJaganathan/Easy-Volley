@@ -1,7 +1,6 @@
 package com.dhamodharan.easyvolley;
 
 import android.content.Context;
-import android.widget.Toast;
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.NetworkError;
@@ -19,7 +18,7 @@ import org.json.JSONObject;
 
 public class VolleyCall {
 
-  public static final int MY_SOCKET_TIMEOUT_MS = 10000; // 10 seconds for Retry policy
+  private static final int MY_SOCKET_TIMEOUT_MS = 10000; // 10 seconds for Retry policy
 
   public static void getResponse(final Context context, String url, int method, HashMap<String,
       String> payload, final VolleyCallback volleyCallback) {
@@ -29,24 +28,36 @@ public class VolleyCall {
       @Override
       public void onResponse(JSONObject response) {
 
-        // Success response
-        volleyCallback.onSuccessResponse(response);
+        if (response != null) {
+          // Success response
+          volleyCallback.onSuccessResponse(response);
+        } else {
+          volleyCallback.onError(null);
+        }
 
       }
     }, new Response.ErrorListener() {
       @Override
       public void onErrorResponse(VolleyError error) {
 
-        // Error response
-        Message_Info(error, context, volleyCallback);
+        if (error instanceof TimeoutError || error instanceof NoConnectionError) {
+          volleyCallback.onVolleyError("Timeout Error");
+        } else if (error instanceof AuthFailureError) {
+          volleyCallback.onVolleyError("AuthFailure Error");
+        } else if (error instanceof ServerError) {
+          volleyCallback.onVolleyError("Server Error");
+        } else if (error instanceof NetworkError) {
+          volleyCallback.onVolleyError("Network Error");
+        } else if (error instanceof ParseError) {
+          volleyCallback.onVolleyError("Parse Error");
+        }
       }
-
 
     }
     ) {
       @Override
-      public Map<String, String> getHeaders() throws AuthFailureError {
-        Map<String, String> params = new HashMap<String, String>();
+      public Map<String, String> getHeaders() {
+        Map<String, String> params = new HashMap<>();
         //Add Header
         params.put("Content-Type", "application/json");
 
@@ -62,30 +73,5 @@ public class VolleyCall {
 
     // Singleton Request Queue
     VolleySingleton.getInstance(context).getRequestQueue().add(request);
-
-  }
-
-
-  public static void Message_Info(VolleyError error, Context context,
-      VolleyCallback volleyCallback) {
-
-    if (error instanceof NetworkError) {
-      volleyCallback.verror(error);
-    } else if (error instanceof ServerError) {
-      // check & Test your API url
-      Toast.makeText(context, "Server not found", Toast.LENGTH_SHORT).show();
-    } else if (error instanceof AuthFailureError) {
-      volleyCallback.verror(error);
-    } else if (error instanceof ParseError) {
-      volleyCallback.verror(error);
-    } else if (error instanceof NoConnectionError) {
-      // No internet error
-      Toast.makeText(context, "No connection error", Toast.LENGTH_SHORT).show();
-    } else if (error instanceof TimeoutError) {
-      // Time-out error
-      // Add toast here
-    } else {
-      volleyCallback.verror(error);
-    }
   }
 }
