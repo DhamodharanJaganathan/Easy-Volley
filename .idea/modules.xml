@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Easy-Volley.iml" filepath="$PROJECT_DIR$/Easy-Volley.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Easy-Volley.iml" filepath="$PROJECT_DIR$/Easy-Volley.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easy-volley/easy-volley.iml" filepath="$PROJECT_DIR$/easy-volley/easy-volley.iml" />
       <module fileurl="file://$PROJECT_DIR$/easy-volley/easy-volley.iml" filepath="$PROJECT_DIR$/easy-volley/easy-volley.iml" />
     </modules>
   </component>

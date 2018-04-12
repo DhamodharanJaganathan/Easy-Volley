@@ -26,6 +26,6 @@ android {
 
 dependencies {
     //Volley Lib
-    compile 'com.android.volley:volley:1.0.0'
+    implementation 'com.android.volley:volley:1.0.0'
 
 }
