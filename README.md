@@ -3,7 +3,7 @@
 Volley is an HTTP library that makes networking for Android apps easier and, most importantly, faster.
 
 <p align="center">
-  <img src="https://s7.postimg.org/wusv36hpn/thumb.jpg" width="256" title="Github Logo">
+  <img src="https://raw.githubusercontent.com/DhamodharanJaganathan/Easy-Volley/master/Screenshots/screenshot-1520146598863.jpg">
  
 </p>
 
