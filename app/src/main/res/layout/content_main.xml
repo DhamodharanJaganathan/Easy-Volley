@@ -1,70 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:paddingTop="20dp"
-        android:text="Android Easy-Volley Library"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="16sp" />
+  <TextView
+    android:id="@+id/text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:paddingTop="20dp"
+    android:gravity="center"
+    android:text="Android Easy-Volley Library"
+    android:textColor="@android:color/holo_red_dark"
+    android:textSize="16sp"/>
 
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/text"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
+  <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="20dp"
+    android:layout_below="@+id/text"
+    android:orientation="vertical">
 
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="GET"
-            android:textSize="20sp" />
+    <Button
+      android:id="@+id/button1"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:text="GET"
+      android:textSize="20sp"/>
 
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="POST"
-            android:textSize="20sp" />
+    <Button
+      android:id="@+id/button2"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:layout_gravity="center"
+      android:text="POST"
+      android:textSize="20sp"/>
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="PUT"
-            android:textSize="20sp" />
+    <Button
+      android:id="@+id/button3"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:layout_gravity="center"
+      android:text="PUT"
+      android:textSize="20sp"/>
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="DELETE"
-            android:textSize="20sp" />
+    <Button
+      android:id="@+id/button4"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:layout_gravity="center"
+      android:text="DELETE"
+      android:textSize="20sp"/>
 
 
-    </LinearLayout>
+  </LinearLayout>
 
 
 </RelativeLayout>
