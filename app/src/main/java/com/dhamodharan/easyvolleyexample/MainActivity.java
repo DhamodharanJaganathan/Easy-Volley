@@ -17,6 +17,7 @@ import com.dhamodharan.easyvolley.VolleyCall;
 import com.dhamodharan.easyvolley.VolleyCallback;
 import java.util.HashMap;
 import org.json.JSONObject;
+import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,10 +36,15 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
     ButterKnife.bind(this);
 
-    FloatingActionButton fab = findViewById(R.id.fab);
+    // Timber Log
+    Timber.tag("LifeCycles");
+    Timber.d("Activity Created");
+
+    final FloatingActionButton fab = findViewById(R.id.fab);
     fab.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
+        Timber.i("fab");
         Snackbar.make(view, "Developed by DJ", Snackbar.LENGTH_LONG)
             .setAction("Action", null).show();
       }
@@ -74,11 +80,11 @@ public class MainActivity extends AppCompatActivity {
 
       HashMap<String, String> payload = new HashMap<>();  // Dummy payload
 
-      String url = "http://httpbin.org/get?param1=hello";
+      final String url = "http://httpbin.org/get?param1=hello";
       VolleyCall.getResponse(MainActivity.this, url, 0, payload, new VolleyCallback() {
         @Override
         public void onSuccessResponse(JSONObject response) {
-
+          Timber.d(response.toString());
           Toast.makeText(MainActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
         }
 
