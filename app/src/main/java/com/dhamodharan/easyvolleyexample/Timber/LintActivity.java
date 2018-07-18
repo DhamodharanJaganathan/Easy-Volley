@@ -3,14 +3,14 @@ package com.dhamodharan.easyvolleyexample.Timber;
 import static java.lang.String.format;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import timber.log.Timber;
 
 @SuppressLint("Registered") //
-public class LintActivity extends Activity {
+public class LintActivity extends AppCompatActivity {
   /**
    * Below are some examples of how NOT to use Timber.
    *

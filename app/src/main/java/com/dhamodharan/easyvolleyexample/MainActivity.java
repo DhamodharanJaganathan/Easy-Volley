@@ -12,9 +12,6 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import com.dhamodharan.easyvolley.InternetConnectionChecker;
-import com.dhamodharan.easyvolley.VolleyCall;
-import com.dhamodharan.easyvolley.VolleyCallback;
 import java.util.HashMap;
 import org.json.JSONObject;
 import timber.log.Timber;
@@ -76,12 +73,12 @@ public class MainActivity extends AppCompatActivity {
 
   @OnClick(R.id.button1)
   public void onButton1Clicked() {
-    if (InternetConnectionChecker.getInstance(this).isOnline()) {
+    if (InternetConnectionChecker.Companion.getInstance(this).isOnline()) {
 
       HashMap<String, String> payload = new HashMap<>();  // Dummy payload
 
       final String url = "http://httpbin.org/get?param1=hello";
-      VolleyCall.getResponse(MainActivity.this, url, 0, payload, new VolleyCallback() {
+      VolleyCall.INSTANCE.getResponse(MainActivity.this, url, 0, payload, new VolleyCallback() {
         @Override
         public void onSuccessResponse(JSONObject response) {
           Timber.d(response.toString());
@@ -115,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
   @OnClick(R.id.button2)
   public void onButton2Clicked() {
 
-    if (InternetConnectionChecker.getInstance(this).isOnline()) {
+    if (InternetConnectionChecker.Companion.getInstance(this).isOnline()) {
 
       // post data (ie: form data)
       HashMap<String, String> payload = new HashMap<>();
@@ -123,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
       payload.put("email", "http://itsalif.info");
 
       String url = "http://httpbin.org/post";
-      VolleyCall.getResponse(MainActivity.this, url, 1, payload, new VolleyCallback() {
+      VolleyCall.INSTANCE.getResponse(MainActivity.this, url, 1, payload, new VolleyCallback() {
         @Override
         public void onSuccessResponse(JSONObject response) {
 
@@ -156,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
   @OnClick(R.id.button3)
   public void onButton3Clicked() {
 
-    if (InternetConnectionChecker.getInstance(this).isOnline()) {
+    if (InternetConnectionChecker.Companion.getInstance(this).isOnline()) {
 
       // post data (ie: form data)
       HashMap<String, String> payload = new HashMap<>();
@@ -164,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
       payload.put("email", "http://itsalif.info");
 
       String url = "http://httpbin.org/put";
-      VolleyCall.getResponse(MainActivity.this, url, 2, payload, new VolleyCallback() {
+      VolleyCall.INSTANCE.getResponse(MainActivity.this, url, 2, payload, new VolleyCallback() {
         @Override
         public void onSuccessResponse(JSONObject response) {
 
@@ -197,12 +194,12 @@ public class MainActivity extends AppCompatActivity {
   @OnClick(R.id.button4)
   public void onButton4Clicked() {
 
-    if (InternetConnectionChecker.getInstance(this).isOnline()) {
+    if (InternetConnectionChecker.Companion.getInstance(this).isOnline()) {
 
       HashMap<String, String> payload = new HashMap<>();  // Dummy payload
 
       String url = "http://httpbin.org/delete";
-      VolleyCall.getResponse(MainActivity.this, url, 3, payload, new VolleyCallback() {
+      VolleyCall.INSTANCE.getResponse(MainActivity.this, url, 3, payload, new VolleyCallback() {
         @Override
         public void onSuccessResponse(JSONObject response) {
 
