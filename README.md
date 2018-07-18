@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/DhamodharanJaganathan/Easy-Volley/master/Screenshots/android_banner.png">
 
 
-# Easy-Volley-Android (Retry Policy Added)
+# Easy-Volley-Android
 
 Volley is an HTTP library that makes networking for Android apps easier and, most importantly, faster.
 
