@@ -151,5 +151,5 @@ if (InternetConnectionChecker.getInstance(this).isOnline()) {
     }  // No Internet Connection
 ```
 
-[<img src="https://raw.githubusercontent.com/DhamodharanJaganathan/Easy-Volley/master/Screenshots/google-play-badge.png">](https://play.google.com/store/apps/details?id=com.dhamodharan.easyvolleyexample)
+[<img src="https://raw.githubusercontent.com/DhamodharanJaganathan/Easy-Volley/master/Screenshots/google-play-badge.png" width="256" >](https://play.google.com/store/apps/details?id=com.dhamodharan.easyvolleyexample)
 
