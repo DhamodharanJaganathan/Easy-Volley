@@ -17,7 +17,6 @@ import com.dhamodharan.easyvolley.VolleyCall;
 import com.dhamodharan.easyvolley.VolleyCallback;
 import java.util.HashMap;
 import org.json.JSONObject;
-import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,15 +35,10 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
     ButterKnife.bind(this);
 
-    // Timber Log
-    Timber.tag("LifeCycles");
-    Timber.d("Activity Created");
-
     final FloatingActionButton fab = findViewById(R.id.fab);
     fab.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        Timber.i("fab");
         Snackbar.make(view, "Developed by DJ", Snackbar.LENGTH_LONG)
             .setAction("Action", null).show();
       }
@@ -84,30 +78,22 @@ public class MainActivity extends AppCompatActivity {
       VolleyCall.getResponse(MainActivity.this, url, 0, payload, new VolleyCallback() {
         @Override
         public void onSuccessResponse(JSONObject response) {
-          Timber.d(response.toString());
           Toast.makeText(MainActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
         }
 
         @Override
         public void onError(JSONObject result) {
-
-          Toast.makeText(MainActivity.this, "No Response from server", Toast
-              .LENGTH_SHORT).show();
+          // No Response from Server
         }
 
         @Override
         public void onVolleyError(String error) {
-
-          Toast.makeText(MainActivity.this, error, Toast.LENGTH_SHORT).show();
-
+          // Error
         }
 
 
       });
-    } else {
-
-      Toast.makeText(this, "No Internet Connection", Toast.LENGTH_SHORT).show();
-    }
+    }  // No Internet Connection
 
 
   }
@@ -132,26 +118,18 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onError(JSONObject result) {
-
-          Toast.makeText(MainActivity.this, "No Response from server", Toast
-              .LENGTH_SHORT).show();
+          // No Response from Server
         }
 
         @Override
         public void onVolleyError(String error) {
-
-          Toast.makeText(MainActivity.this, error, Toast.LENGTH_SHORT).show();
-
+          // Error
         }
 
 
       });
-    } else {
-
-      Toast.makeText(this, "No Internet Connection", Toast.LENGTH_SHORT).show();
     }
-
-  }
+  }// No Internet Connection
 
   @OnClick(R.id.button3)
   public void onButton3Clicked() {
@@ -173,24 +151,17 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onError(JSONObject result) {
-
-          Toast.makeText(MainActivity.this, "No Response from server", Toast
-              .LENGTH_SHORT).show();
+          // No Response from Server
         }
 
         @Override
         public void onVolleyError(String error) {
-
-          Toast.makeText(MainActivity.this, error, Toast.LENGTH_SHORT).show();
-
+          // Error
         }
 
 
       });
-    } else {
-
-      Toast.makeText(this, "No Internet Connection", Toast.LENGTH_SHORT).show();
-    }
+    }  // No Internet Connection
 
   }
 
@@ -211,24 +182,17 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onError(JSONObject result) {
-
-          Toast.makeText(MainActivity.this, "No Response from server", Toast
-              .LENGTH_SHORT).show();
+          // No Response from Server
         }
 
         @Override
         public void onVolleyError(String error) {
-
-          Toast.makeText(MainActivity.this, error, Toast.LENGTH_SHORT).show();
-
+          // Error
         }
 
 
       });
-    } else {
-
-      Toast.makeText(this, "No Internet Connection", Toast.LENGTH_SHORT).show();
-    }
+    }  // No Internet Connection
 
   }
 }
