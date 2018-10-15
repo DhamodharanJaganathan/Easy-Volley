@@ -11,6 +11,10 @@ Volley is an HTTP library that makes networking for Android apps easier and, mos
  
 </p>
 
+## Demo
+
+[<img src="https://raw.githubusercontent.com/DhamodharanJaganathan/Easy-Volley/master/Screenshots/google-play-badge.png" width="256" >](https://play.google.com/store/apps/details?id=com.dhamodharan.easyvolleyexample)
+
 ## Add as dependency
 This library is not yet released in Maven Central, until then you can add as a library module or use JitPack.io add remote maven url
 
@@ -150,4 +154,6 @@ if (InternetConnectionChecker.getInstance(this).isOnline()) {
       });
     }  // No Internet Connection
 ```
+
+
 
