@@ -35,6 +35,16 @@ then add a library dependency. **Remember** to check for latest release [here](h
     }
 ```
 
+Add the INTERNET permission to your manifest file.
+
+You have to add this line:
+
+```<uses-permission android:name="android.permission.INTERNET"/> ```
+
+outside the application tag in your AndroidManifest.xml
+
+
+
 ## Example for GET method :
 
 ```grovy
@@ -46,30 +56,18 @@ then add a library dependency. **Remember** to check for latest release [here](h
       VolleyCall.getResponse(MainActivity.this, url, 0, payload, new VolleyCallback() {
         @Override
         public void onSuccessResponse(JSONObject response) {
-
           Toast.makeText(MainActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
         }
-
-        @Override
+       @Override
         public void onError(JSONObject result) {
-
-          Toast.makeText(MainActivity.this, "No Response from server", Toast
-              .LENGTH_SHORT).show();
+          // No Response from Server
         }
-
         @Override
         public void onVolleyError(String error) {
-
-          Toast.makeText(MainActivity.this, error, Toast.LENGTH_SHORT).show();
-
+          // Error
         }
-
-
       });
-    } else {
-
-      Toast.makeText(this, "No Internet Connection", Toast.LENGTH_SHORT).show();
-    }
+    }  // No Internet Connection
 ```
 
 ## Example for POST method :    
@@ -86,30 +84,18 @@ if (InternetConnectionChecker.getInstance(this).isOnline()) {
       VolleyCall.getResponse(MainActivity.this, url, 1, payload, new VolleyCallback() {
         @Override
         public void onSuccessResponse(JSONObject response) {
-
           Toast.makeText(MainActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
         }
-
         @Override
         public void onError(JSONObject result) {
-
-          Toast.makeText(MainActivity.this, "No Response from server", Toast
-              .LENGTH_SHORT).show();
+          // No Response from Server
         }
-
         @Override
         public void onVolleyError(String error) {
-
-          Toast.makeText(MainActivity.this, error, Toast.LENGTH_SHORT).show();
-
+          // Error
         }
-
-
       });
-    } else {
-
-      Toast.makeText(this, "No Internet Connection", Toast.LENGTH_SHORT).show();
-    }
+    }  // No Internet Connection
 ```
 
 ## Example for PUT method : 
@@ -126,30 +112,18 @@ if (InternetConnectionChecker.getInstance(this).isOnline()) {
       VolleyCall.getResponse(MainActivity.this, url, 2, payload, new VolleyCallback() {
         @Override
         public void onSuccessResponse(JSONObject response) {
-
           Toast.makeText(MainActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
-        }
-
+          }
         @Override
         public void onError(JSONObject result) {
-
-          Toast.makeText(MainActivity.this, "No Response from server", Toast
-              .LENGTH_SHORT).show();
+          // No Response from Server
         }
-
         @Override
         public void onVolleyError(String error) {
-
-          Toast.makeText(MainActivity.this, error, Toast.LENGTH_SHORT).show();
-
+          // Error
         }
-
-
       });
-    } else {
-
-      Toast.makeText(this, "No Internet Connection", Toast.LENGTH_SHORT).show();
-    }
+    }  // No Internet Connection
 ```
 
 ## Example for DELETE method :
@@ -163,29 +137,17 @@ if (InternetConnectionChecker.getInstance(this).isOnline()) {
       VolleyCall.getResponse(MainActivity.this, url, 3, payload, new VolleyCallback() {
         @Override
         public void onSuccessResponse(JSONObject response) {
-
           Toast.makeText(MainActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
         }
-
         @Override
         public void onError(JSONObject result) {
-
-          Toast.makeText(MainActivity.this, "No Response from server", Toast
-              .LENGTH_SHORT).show();
+          // No Response from Server
         }
-
         @Override
         public void onVolleyError(String error) {
-
-          Toast.makeText(MainActivity.this, error, Toast.LENGTH_SHORT).show();
-
+          // Error
         }
-
-
       });
-    } else {
-
-      Toast.makeText(this, "No Internet Connection", Toast.LENGTH_SHORT).show();
-    }
+    }  // No Internet Connection
 ```
 
