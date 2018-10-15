@@ -31,7 +31,7 @@ then add a library dependency. **Remember** to check for latest release [here](h
                              
 ```groovy
     dependencies {
-        compile 'com.github.DhamodharanJaganathan:Easy-Volley:2.0.0'
+        compile 'com.github.DhamodharanJaganathan:Easy-Volley:3.0.0'
     }
 ```
 
