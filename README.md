@@ -37,7 +37,7 @@ then add a library dependency. **Remember** to check for latest release [here](h
 
 Add the INTERNET permission to your manifest file.
 
-You have to add this line:
+### You have to add this line:
 
 ```<uses-permission android:name="android.permission.INTERNET"/> ```
 
