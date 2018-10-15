@@ -51,7 +51,7 @@ outside the application tag in your AndroidManifest.xml
 
 ## Example for GET method :
 
-```grovy
+```java
  if (InternetConnectionChecker.getInstance(this).isOnline()) {
 
       HashMap<String, String> payload = new HashMap<>();  // Dummy payload
@@ -76,7 +76,7 @@ outside the application tag in your AndroidManifest.xml
 
 ## Example for POST method :    
 
-```grovy
+```java
 if (InternetConnectionChecker.getInstance(this).isOnline()) {
 
       // post data (ie: form data)
@@ -104,7 +104,7 @@ if (InternetConnectionChecker.getInstance(this).isOnline()) {
 
 ## Example for PUT method : 
 
-```grovy
+```java
  if (InternetConnectionChecker.getInstance(this).isOnline()) {
 
       // post data (ie: form data)
@@ -132,7 +132,7 @@ if (InternetConnectionChecker.getInstance(this).isOnline()) {
 
 ## Example for DELETE method :
 
-```grovy
+```java
 if (InternetConnectionChecker.getInstance(this).isOnline()) {
 
       HashMap<String, String> payload = new HashMap<>();  // Dummy payload
