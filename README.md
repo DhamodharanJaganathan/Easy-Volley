@@ -43,7 +43,9 @@ Add the INTERNET permission to your manifest file.
 
 ### You have to add this line:
 
-```<uses-permission android:name="android.permission.INTERNET"/> ```
+```xml
+<uses-permission android:name="android.permission.INTERNET"/> 
+```
 
 outside the application tag in your AndroidManifest.xml
 
